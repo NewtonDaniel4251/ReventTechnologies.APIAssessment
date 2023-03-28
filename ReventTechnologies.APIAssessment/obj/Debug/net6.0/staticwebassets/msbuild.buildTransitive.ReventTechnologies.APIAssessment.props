@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\ReventTechnologies.APIAssessment.props" />
+</Project>

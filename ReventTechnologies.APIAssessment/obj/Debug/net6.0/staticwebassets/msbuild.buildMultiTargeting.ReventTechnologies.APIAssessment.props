@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ReventTechnologies.APIAssessment.props" />
+</Project>

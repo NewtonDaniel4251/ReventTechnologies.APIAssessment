@@ -1,0 +1,14 @@
+C:\Users\Fintrak\source\repos\ReventTechnologies.APIAssessment\ReventTechnologies.Data\bin\Debug\net6.0\ReventTechnologies.Data.deps.json
+C:\Users\Fintrak\source\repos\ReventTechnologies.APIAssessment\ReventTechnologies.Data\bin\Debug\net6.0\ReventTechnologies.Data.runtimeconfig.json
+C:\Users\Fintrak\source\repos\ReventTechnologies.APIAssessment\ReventTechnologies.Data\bin\Debug\net6.0\ReventTechnologies.Data.dll
+C:\Users\Fintrak\source\repos\ReventTechnologies.APIAssessment\ReventTechnologies.Data\bin\Debug\net6.0\ReventTechnologies.Data.pdb
+C:\Users\Fintrak\source\repos\ReventTechnologies.APIAssessment\ReventTechnologies.Data\obj\Debug\net6.0\ReventTechnologies.Data.csproj.AssemblyReference.cache
+C:\Users\Fintrak\source\repos\ReventTechnologies.APIAssessment\ReventTechnologies.Data\obj\Debug\net6.0\ReventTechnologies.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fintrak\source\repos\ReventTechnologies.APIAssessment\ReventTechnologies.Data\obj\Debug\net6.0\ReventTechnologies.Data.AssemblyInfoInputs.cache
+C:\Users\Fintrak\source\repos\ReventTechnologies.APIAssessment\ReventTechnologies.Data\obj\Debug\net6.0\ReventTechnologies.Data.AssemblyInfo.cs
+C:\Users\Fintrak\source\repos\ReventTechnologies.APIAssessment\ReventTechnologies.Data\obj\Debug\net6.0\ReventTechnologies.Data.csproj.CoreCompileInputs.cache
+C:\Users\Fintrak\source\repos\ReventTechnologies.APIAssessment\ReventTechnologies.Data\obj\Debug\net6.0\ReventTechnologies.Data.dll
+C:\Users\Fintrak\source\repos\ReventTechnologies.APIAssessment\ReventTechnologies.Data\obj\Debug\net6.0\refint\ReventTechnologies.Data.dll
+C:\Users\Fintrak\source\repos\ReventTechnologies.APIAssessment\ReventTechnologies.Data\obj\Debug\net6.0\ReventTechnologies.Data.pdb
+C:\Users\Fintrak\source\repos\ReventTechnologies.APIAssessment\ReventTechnologies.Data\obj\Debug\net6.0\ReventTechnologies.Data.genruntimeconfig.cache
+C:\Users\Fintrak\source\repos\ReventTechnologies.APIAssessment\ReventTechnologies.Data\obj\Debug\net6.0\ref\ReventTechnologies.Data.dll

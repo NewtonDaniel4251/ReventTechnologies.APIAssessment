@@ -1,0 +1,93 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "ReventTechnologies.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ReventTechnologies.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ReventTechnologies.Data.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ReventTechnologies.Data/1.0.0": {
+      "type": "project",
+      "path": "../ReventTechnologies.Data/ReventTechnologies.Data.csproj",
+      "msbuildProject": "../ReventTechnologies.Data/ReventTechnologies.Data.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "ReventTechnologies.Data >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Fintrak\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Fintrak\\source\\repos\\ReventTechnologies.APIAssessment\\ReventTechnologies.APIAssessment\\ReventTechnologies.APIAssessment.csproj",
+      "projectName": "ReventTechnologies.APIAssessment",
+      "projectPath": "C:\\Users\\Fintrak\\source\\repos\\ReventTechnologies.APIAssessment\\ReventTechnologies.APIAssessment\\ReventTechnologies.APIAssessment.csproj",
+      "packagesPath": "C:\\Users\\Fintrak\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Fintrak\\source\\repos\\ReventTechnologies.APIAssessment\\ReventTechnologies.APIAssessment\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Fintrak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\Users\\Fintrak\\source\\repos\\ReventTechnologies.APIAssessment\\ReventTechnologies.Data\\ReventTechnologies.Data.csproj": {
+              "projectPath": "C:\\Users\\Fintrak\\source\\repos\\ReventTechnologies.APIAssessment\\ReventTechnologies.Data\\ReventTechnologies.Data.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
