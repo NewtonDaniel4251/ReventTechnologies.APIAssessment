@@ -22,6 +22,7 @@ namespace ReventTechnologies.APIAssessment.Controllers
         [HttpGet(Name = "GetWeatherForecast"), Authorize]
         public IEnumerable<WeatherForecast> Get()
         {
+            _logger.LogInformation("weather forecasting processing...");
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),

@@ -14,24 +14,28 @@ using Serilog;
 var builder = WebApplication.CreateBuilder(args);
 
 
+
+
+
+
+// Add services to the container.
+
 builder.Services.AddDbContext<ApplicationDBContext>(options =>
            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddTransient<IRegistrationManager, RegistrationManger>();
-//builder.Services.AddTransient<IRegistrationManager, RegistrationManger>();
-//builder.Services.AddTransient<IRegistrationManager, RegistrationManger>();
 
 
-// Add services to the container.
+builder.Services.AddControllers();
+
 
 var logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
     .Enrich.FromLogContext()
     .CreateLogger();
 builder.Logging.ClearProviders();
-builder.Logging.AddSerilog();
+builder.Logging.AddSerilog(logger);
 
-builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>

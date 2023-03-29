@@ -16,17 +16,22 @@ namespace ReventTechnologies.APIAssessment.Controllers
     {
         IRegistrationManager _registrationmanager;
 
-     
+        private readonly ILogger<RegistrationController> _logger;
 
-        public RegistrationController(IRegistrationManager registrationManager)
+
+
+        public RegistrationController(IRegistrationManager registrationManager, ILogger<RegistrationController> logger)
         {
             _registrationmanager = registrationManager;
+
+            _logger = logger;
         }
 
 
         [HttpGet]
         public ActionResult<Registration> GetById(int id)
         {
+            _logger.LogInformation("get registered user is processing...");
             var reg = _registrationmanager.GetById(id);
 
             if (reg == null)
@@ -52,6 +57,8 @@ namespace ReventTechnologies.APIAssessment.Controllers
         {
             try
             {
+                _logger.LogInformation("get registered user is processing...");
+
                 registration.DateCreated = DateTime.Now.AddDays(-10);
                 bool save = _registrationmanager.Add(registration);
                 if (save)
