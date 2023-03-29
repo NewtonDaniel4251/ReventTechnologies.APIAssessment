@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Text;
 using ReventTechnologies.Data.Interfaces.Manager;
 using ReventTechnologies.Data.Manager;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +23,13 @@ builder.Services.AddTransient<IRegistrationManager, RegistrationManger>();
 
 
 // Add services to the container.
+
+var logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .Enrich.FromLogContext()
+    .CreateLogger();
+builder.Logging.ClearProviders();
+builder.Logging.AddSerilog();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
