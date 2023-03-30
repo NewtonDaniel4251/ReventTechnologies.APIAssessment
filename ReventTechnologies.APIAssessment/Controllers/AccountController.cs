@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using ReventTechnologies.APIAssessment.Models;
+using ReventTechnologies.Data.Context;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
@@ -14,9 +16,13 @@ namespace ReventTechnologies.APIAssessment.Controllers
     {
         private readonly IConfiguration _configuration;
 
-        public AccountController(IConfiguration configuration )
+        private readonly ApplicationDBContext _context;
+
+
+        public AccountController(IConfiguration configuration, ApplicationDBContext context )
         {
             _configuration = configuration;
+            _context = context;
         }
 
         public static User _user = new User();
@@ -30,6 +36,15 @@ namespace ReventTechnologies.APIAssessment.Controllers
             _user.PassworHash = passwordHash;
             _user.PasswordSalt = passwordSalt;
 
+            var user = new User()
+            {
+                username = request.UserName,
+                PassworHash = passwordHash,
+                PasswordSalt = passwordSalt
+
+            };
+            _context.Add(user);
+            _context.SaveChanges();
 
             return Ok(_user);
         }
@@ -41,21 +56,35 @@ namespace ReventTechnologies.APIAssessment.Controllers
                 passwordSalt = pmesh.Key;
                 passwordHash = pmesh.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
             }
+    
+
         }
 
         [HttpPost("UserLogin")]
         public async Task<ActionResult<string>> Login(UserRegister _login)
         {
-            if(_user.username != _login.UserName) 
+            var getUser = _context.Users.FirstOrDefault(i => i.username == _login.UserName);
+
+            if (getUser == null)
+            {
+                return BadRequest("No User record found");
+
+            }
+
+            if (getUser.username != _login.UserName) 
             {
                 return BadRequest("User not found");
             }
 
-            if(!VerifiedPasswordHash(_login.Password, _user.PasswordSalt, _user.PassworHash))
+            if(!VerifiedPasswordHash(_login.Password, getUser.PasswordSalt, getUser.PassworHash))
             { 
                 return BadRequest("You have entered a wrong password!");
             }      
             
+            _user.username = _login.UserName;
+            _user.PassworHash = getUser.PassworHash;
+            _user.PasswordSalt = getUser.PasswordSalt;        
+
             string token = GenerateToken(_user);
 
             return Ok(token);

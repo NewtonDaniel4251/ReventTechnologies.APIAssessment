@@ -32,6 +32,7 @@ namespace ReventTechnologies.APIAssessment.Controllers
         public ActionResult<Registration> GetById(int id)
         {
             _logger.LogInformation("get registered user is processing...");
+
             var reg = _registrationmanager.GetById(id);
 
             if (reg == null)

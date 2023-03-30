@@ -22,7 +22,9 @@ namespace ReventTechnologies.Data.Manager
 
         public Registration GetById(int id)
         {
-            return GetFirstOrDefault(x => x.Id == id);
+            return GetFirstOrDefault(x => x.Id == id);      
+
+           
         }
 
        
